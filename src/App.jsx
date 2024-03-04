@@ -52,7 +52,11 @@ export default function App() {
   }
 
   return (
-    <div className='app-container güneşli-background'>
+    <div className= {
+      current === 0 && "app-container güneşli-background" ||
+      current === 1 && "app-container yağmurlu-background" ||
+      current === 2 && "app-container karlı-background"
+    }>
       <div className='weather-container'>
         <div className='icon'>
         {current === 0 && <div>☀️</div>}
